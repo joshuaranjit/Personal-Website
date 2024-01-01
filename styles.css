@@ -1,6 +1,6 @@
 body {
     font-family: 'Noto Sans', sans-serif;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin: 0;
     padding: 0;
 }
@@ -52,7 +52,7 @@ nav {
 .tooltip {
     visibility: hidden;
     width: 120px;
-    background-color: black;
+    background-color: #333;
     color: white;
     text-align: center;
     border-radius: 6px;
@@ -96,4 +96,30 @@ nav {
     width: 20px;
     height: 20px;
     margin-right: 8px;
+}
+
+
+/* Title Content */
+
+.content-container {
+    width: 750px;
+    margin: 0 auto; /* Center the div */
+    /* Additional styling as needed */
+    background-color: white;
+}
+
+.memoji-image {
+    width: 140px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    /* Additional styling for the image */
+    display: block;
+    padding-top: 80px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    display: block;
+    padding-left: 4px;
+    color: #333;
 }
