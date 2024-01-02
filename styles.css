@@ -123,3 +123,69 @@ h1 {
     padding-left: 4px;
     color: #333;
 }
+
+/* Callout Design */
+
+.about-callout {
+    background-color: #c2ecfe; /* Background color */
+    border-radius: 4px; /* Border radius */
+    padding: 16px; /* Padding on all sides */
+    color: #ffffff; /* Text color, assuming white for contrast */
+    /* Additional styling as needed */
+    width: 718px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.callout-emoji {
+    /* Styles specific to the emoji */
+    margin-right: 8px; /* Add some space between the emoji and the text */
+    font-size: 18px;
+}
+
+.callout-text {
+    font-size: 16px; /* Text size */
+    font-weight: 500; /* Font weight */
+    line-height: 24px; /* Line height */
+    /* Additional text-specific styling as needed */
+    color: #333;
+    flex: 1;
+}
+
+/* reusable divider */
+.divider {
+    max-width: 750px;
+    border-top: 1px solid #e2e0dd; /* Solid line, adjust color as needed */
+    margin: 20px auto; /* Spacing above and below */
+}
+
+/* Inner - nav styling*/
+.link-container {
+    display: flex;
+    justify-content: space-between; /* Evenly space out the links */
+    width: 750px;
+    margin: 0 auto; /* Center the container */
+}
+
+.custom-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Inherits the text color */
+    padding: 4px 8px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-link:hover {
+    background-color: #f0f0f0; /* Grey background on hover */
+}
+
+.icon {
+    /* Style your icon */
+    margin-right: 8px; /* Space between the icon and the text */
+    /* font-size: 18px; */
+}
+
