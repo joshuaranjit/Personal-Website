@@ -8,12 +8,13 @@ body {
 nav {
     background-color: white;
     color: #333;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     margin: 0;
     padding: 0;
     height: 45px;
+    width: 100%;
 }
 
 .navbar-content {
@@ -187,5 +188,93 @@ h1 {
     /* Style your icon */
     margin-right: 8px; /* Space between the icon and the text */
     /* font-size: 18px; */
+    font-size: 18px;
 }
 
+/* About Section */
+
+h2{
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+.about-section {
+    max-width: 750px;
+    margin: 0 auto; /* Centering the section */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex-basis: 55%;
+    padding-right: 24px; /* Spacing between text and image */
+    width: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.about-right {
+    flex-basis: 35%;
+    flex-shrink: 1;
+    flex-grow: 2;
+    max-width: 120%;
+}
+
+.about-image {
+    width: 100%; /* Adjust as per your preference */
+    height: auto; /* Maintain aspect ratio */
+    /* Style as needed */
+}
+
+.profile-links {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    /* Style your list as needed */
+}
+
+.profile-links li {
+    margin-bottom: 10px; /* Space between list items */
+    /* Style your list items as needed */
+}
+
+.profile-links a {
+    /* Style your links as needed */
+}
+
+.profile-link {
+    display: flex;
+    align-items: left;
+    text-decoration: none;
+    color: inherit; /* Adjust as needed */
+    padding: 4px 8px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-link:hover {
+    background-color: #f0f0f0; /* Grey background on hover */
+}
+
+.profile-icon {
+    width: 20px; /* Adjust as per your icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.about-text p {
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.about-text strong {
+    font-weight: 500;
+}
+
+.Hi-there-p {
+    margin-top: 0;
+}
