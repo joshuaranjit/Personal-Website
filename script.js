@@ -47,3 +47,31 @@ document.addEventListener("DOMContentLoaded", function() {
         exactDate.style.visibility = 'hidden';
     });
 });
+
+
+
+// arrow animation
+// document.querySelectorAll('.dropdown-button').forEach(button => {
+//     button.addEventListener('click', function() {
+//         const dropdownContent = this.nextElementSibling;
+//         const arrow = this.querySelector('.arrow-down');
+
+//         if (dropdownContent.style.display === "block") {
+//             dropdownContent.style.display = "none";
+//             arrow.classList.remove('arrow-up');
+//         } else {
+//             dropdownContent.style.display = "block";
+//             arrow.classList.add('arrow-up');
+//         }
+//     });
+// });
+
+document.querySelectorAll('.dropdown-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const dropdownContent = this.nextElementSibling;
+        const arrow = this.querySelector('.arrow-down');
+
+        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        arrow.classList.toggle('arrow-up', dropdownContent.style.display === "block");
+    });
+});

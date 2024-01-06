@@ -182,6 +182,14 @@ h1 {
     margin: 20px auto; /* Spacing above and below */
 }
 
+/* inner divider */
+.inner-divider {
+    width: 100%;
+    border-top: 1px solid #e2e0dd; /* Solid line, adjust color as needed */
+    margin: 10px auto; /* Spacing above and below */
+    z-index: 2;
+}
+
 /* Inner - nav styling*/
 .link-container {
     display: flex;
@@ -262,10 +270,6 @@ h2{
     /* Style your list items as needed */
 }
 
-.profile-links a {
-    /* Style your links as needed */
-}
-
 .profile-link {
     display: flex;
     align-items: left;
@@ -330,4 +334,174 @@ h2{
     margin: 0 auto; /* Center the section */
     /* Add padding as needed */
     /* Add any other styles you've been using for sections */
+}
+
+.experience-item {
+    width: 100%;
+    display: flex;
+    align-items: flex-start; /* Align logo and text vertically */
+    flex-direction: column;
+    margin-bottom: 20px; /* Space between different experience items */
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 18px;
+}
+.company-logo {
+    margin-right: 15px; /* Space between logo and company info */
+}
+
+.company-logo img {
+    width: 50px; /* Adjust based on your preference */
+    height: auto;
+}
+
+.company-info h3 {
+    margin: 0; /* Adjust margins as needed */
+    /* Additional styling for the company name */
+    font-weight: 600;
+    font-size: 1.875em;
+    color: #333;
+}
+
+.experience-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left-column {
+    width: 40%;
+    padding: 0;
+    /* Additional styling as needed */
+}
+
+.left-column, .inner-divider {
+    box-sizing: border-box;
+}
+.details-section p {
+    width: 100%;
+    margin: 5px 0; /* Adjust spacing as needed */
+    white-space: nowrap;
+    padding-bottom: 8px;
+    /* Additional styling */
+}
+
+.dropdown {
+    position: relative;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.dropdown-button {
+    cursor: pointer;
+    /* background-color: #f0f0f0; Example color */
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #37352f;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #ffffff;
+    min-width: 100%;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    font-size: 16px;
+    padding-left: 20px;
+    font-weight: 500;
+
+}
+
+.dropdown-button:active + .dropdown-content,
+.dropdown-content:hover {
+    display: block; /* Show dropdown content on click or hover */
+}
+
+.dropdown-content a {
+    color: #37352f;
+    padding: 3px 2px;
+    text-decoration: none;
+    display: block;
+    
+    
+}
+
+.link-content {
+    display: inline-flex; /* Inline-flex to fit content width */
+    align-items: center;
+    padding: 3px 4px;
+    background-color: transparent; /* Default background */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.link-content-styling {
+    border-bottom: 0.05em solid rgba(55,53,47,.25);
+}
+
+.dropdown-content a:hover .link-content {
+    background-color: #f0f0f0; /* Apply hover effect to link-content */
+    border-radius: 4px;
+}
+
+.dropdown-content a img {
+    margin-right: 8px; /* Space between icon and text */
+    width: 20px; /* Adjust as per your icon size */
+    height: auto; /* Maintain aspect ratio */
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: none;
+}
+
+
+.arrow-down {
+    margin-right: 8px;
+    transform: rotate(-90deg);
+}
+
+.arrow-up {
+    display: inline-block;
+    transform: rotate(0deg); /* Rotates the arrow to point upwards */
+}
+
+
+.right-column {
+    width: 60%;
+    padding-left: 40px;
+    /* Additional styling as needed */
+}
+
+
+/* Scroll Test Div */
+.scroll-test {
+    height: 1000px; /* Adjust the height as needed to test scrolling */
+}
+
+.role-description {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+/* Right Column */
+.role-description p {
+    /* Styling for the paragraph */
+    font-size: 16px;
+    line-height: 24px;
+    white-space: pre-wrap;
+    color: #787774 ;
+    font-weight: 400;
+    margin: 0;
 }
