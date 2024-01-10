@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="dist/css/lightbox.css" rel="stylesheet">
+
+
 
 </head>
 <body>
@@ -142,12 +145,29 @@
                         <!-- Content for the right column (55% width) -->
                         <div class="role-description">
                         <p>As a senior software engineer, I am responsible for leading the development of several large-scale projects using Typescript. From early architectural stages to design scalable and performant systems using design patterns and abstraction techniques. Additionally, I am responsible for mentoring junior engineers to help them grow in their roles and achieve their professional goals. Cross-team contributions in design system and shared code.</p>
-                        </div>          
+                        </div>     
+                        
+                        <!-- Image Gallery Section -->
+                        <div class="image-gallery">
+                            
+                            <a href="assets/ImageGallery/ExperienceSection/Bentley/npulse.jpeg" data-lightbox="my-gallery-ex-bentley" class="gallery-item" data-title="Sample Caption 1">
+                                <img src="assets/ImageGallery/ExperienceSection/Bentley/npulse.jpeg" alt="nPulse Sample 1">
+                            </a>
+                            <a href="assets/ImageGallery/ExperienceSection/Bentley/sample2npulse.png" data-lightbox="my-gallery-ex-bentley" data-title="Sample caption2" class="gallery-item">
+                                <img src="assets/ImageGallery/ExperienceSection/Bentley/sample2npulse.png" alt="nPulse Sample 2">
+                            </a>
+                            
+                            <!-- Repeat for more images -->
+                        </div>
                     </div>
                 </div>
             </div>
 
         </section>
+
+        <!-- Divider -->
+       <div class="divider"></div>
+
         <div class="scroll-test"></div>
 
     </main>
@@ -156,5 +176,9 @@
         <!-- Footer content -->
     </footer>
     <script src="script.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
+    <script src="dist/js/lightbox.js"></script>
+
+
 </body>
 </html>

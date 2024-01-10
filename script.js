@@ -49,23 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-// arrow animation
-// document.querySelectorAll('.dropdown-button').forEach(button => {
-//     button.addEventListener('click', function() {
-//         const dropdownContent = this.nextElementSibling;
-//         const arrow = this.querySelector('.arrow-down');
-
-//         if (dropdownContent.style.display === "block") {
-//             dropdownContent.style.display = "none";
-//             arrow.classList.remove('arrow-up');
-//         } else {
-//             dropdownContent.style.display = "block";
-//             arrow.classList.add('arrow-up');
-//         }
-//     });
-// });
-
 document.querySelectorAll('.dropdown-button').forEach(button => {
     button.addEventListener('click', function() {
         const dropdownContent = this.nextElementSibling;
