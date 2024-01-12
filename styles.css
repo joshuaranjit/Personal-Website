@@ -158,6 +158,7 @@ h1 {
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
+    margin-bottom: 16px;
 }
 
 .callout-emoji {
@@ -199,11 +200,11 @@ h1 {
 }
 
 .custom-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-decoration: none;
     color: inherit; /* Inherits the text color */
-    padding: 4px 8px;
+    padding: 02px 4px;
     background-color: transparent;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -324,19 +325,24 @@ h2{
     margin-bottom: 1px;
 }
 
+.resume-index li a {
+    color:#787774; 
+    border-bottom: 0.05em solid rgba(55,53,47,.25);
+}
+
 .custom-link .icon {
     margin-right: 8px;
 }
 
 /* Experience Section */
-.experience-section {
+.experience-section , .education-section {
     max-width: 750px;
     margin: 0 auto; /* Center the section */
     /* Add padding as needed */
     /* Add any other styles you've been using for sections */
 }
 
-.experience-item {
+.experience-item, .education-item {
     width: 100%;
     display: flex;
     align-items: flex-start; /* Align logo and text vertically */
@@ -344,21 +350,22 @@ h2{
     margin-bottom: 20px; /* Space between different experience items */
 }
 
-.company-header {
+.company-header, .institution-header {
     display: flex;
     align-items: center;
     padding-bottom: 18px;
+    padding-top: 32px;
 }
-.company-logo {
+.company-logo, .institution-logo {
     margin-right: 15px; /* Space between logo and company info */
 }
 
-.company-logo img {
+.company-logo img, .institution-logo img {
     width: 50px; /* Adjust based on your preference */
     height: auto;
 }
 
-.company-info h3 {
+h3 {
     margin: 0; /* Adjust margins as needed */
     /* Additional styling for the company name */
     font-weight: 600;
@@ -366,7 +373,7 @@ h2{
     color: #333;
 }
 
-.experience-details {
+.experience-details, .degree-details {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -532,4 +539,35 @@ h2{
 
 .gallery-item:hover img {
     transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.college-link {
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Use the current text color */
+    padding: 3px 4px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: for rounded corners */
+    transition: background-color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
+    border-bottom: 0.05em solid rgba(55,53,47,.25);
+}
+
+.college-link:hover {
+    background-color: #f0f0f0; /* Example hover background color */
+}
+
+.link-icon {
+    margin-right: 8px; /* Space between icon and text */
+    /* Add any additional styles for the icon */
+}
+
+.classes-about p {
+    /* Styling for the paragraph */
+    font-size: 16px;
+    line-height: 24px;
+    white-space: pre-wrap;
+    color: #787774 ;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 12px;
 }
