@@ -58,3 +58,33 @@ document.querySelectorAll('.dropdown-button').forEach(button => {
         arrow.classList.toggle('arrow-up', dropdownContent.style.display === "block");
     });
 });
+
+// Script for Tab Switching and Management
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.onclick = function() {
+            // Remove active class from all tabs and contents
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => {
+                c.style.display = 'none';
+                c.classList.remove('active');
+            });
+
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            var contentId = 'content-' + this.id;
+            var activeContent = document.getElementById(contentId);
+            activeContent.style.display = 'grid';
+            activeContent.classList.add('active');
+        };
+    });
+
+    // Set the default active tab and content on initial load
+    const defaultActiveTab = document.querySelector('.tab.active');
+    if (defaultActiveTab) {
+        var contentId = 'content-' + defaultActiveTab.id;
+        var activeContent = document.getElementById(contentId);
+        activeContent.style.display = 'grid';
+        activeContent.classList.add('active');
+    }
+});

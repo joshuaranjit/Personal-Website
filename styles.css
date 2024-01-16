@@ -335,7 +335,7 @@ h2{
 }
 
 /* Experience Section */
-.experience-section , .education-section {
+.experience-section , .education-section, .skills-section {
     max-width: 750px;
     margin: 0 auto; /* Center the section */
     /* Add padding as needed */
@@ -571,3 +571,120 @@ h3 {
     margin: 0;
     padding-bottom: 12px;
 }
+
+/* CSS for Skills Section */
+
+.tabs-container {
+    display: flex;
+    justify-content: flex-start; /* Adjust as needed */
+    border-bottom: 1px solid #e2e0dd; /* Bottom border as a divider */
+    padding-bottom: 8px;
+    /* Additional container styling */
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    cursor: pointer;
+    margin: 0 4px;
+    font-size: 14px;
+
+    /* Additional tab styling */
+    position: relative;
+}
+
+.tab img {
+    width: 16px; /* Adjust as per your icon size */
+    height: auto;
+    margin-right: 6px; /* Space between icon and text */
+    filter: opacity(50%);
+}
+
+.tab-icon {
+    color: #c14c8a;
+}
+
+.tab span {
+    /* Additional text styling */
+    color: #787774;
+}
+
+.tab.active img {
+    filter: none;
+}
+
+.tab.active img,
+.tab.active span {
+    color: #333; /* Color for active tabs */
+    /* You may need to adjust if you're using images for icons */
+}
+
+.tab:hover {
+    background-color: #f0f0f0; /* Example hover background color */
+    border-radius: 4px; /* Rounded edges for hover effect */
+}
+
+/* Ensure that the hover effect does not apply to the active tab */
+.tab.active, .tab.active:hover {
+    background-color: transparent;
+    /* Other active tab styles */
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -9px; /* Shift from the bottom of the tab */
+    left: 0;
+    width: 100%; /* Underline spans the full width of the tab */
+    height: 2px; /* Thickness of the underline */
+    background-color: #333; /* Color of the underline */
+}
+
+/* Tab - Card CSS */
+
+
+.card { 
+    display: flex;
+    padding: 8px 10px 10px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    transition: background-color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.card img {
+    width: 16px; /* Icon size */
+    height: auto;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.card span {
+    font-size: 14px; /* Text font size */
+    /* Additional text styling */
+}
+
+.card:hover{
+    background-color: #f0f0f0;
+}
+
+/* Layout for cards in a row */
+.tab-content {
+    display: none;
+}
+
+/* Specific style for the active tab content */
+.tab-content.active {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 4px;
+}
+
+/* Initially show only the Design tab content */
+#content-tab-design {
+    display: grid;
+}
+
