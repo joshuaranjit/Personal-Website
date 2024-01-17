@@ -335,7 +335,7 @@ h2{
 }
 
 /* Experience Section */
-.experience-section , .education-section, .skills-section {
+.experience-section , .education-section, .skills-section, .projects-section {
     max-width: 750px;
     margin: 0 auto; /* Center the section */
     /* Add padding as needed */
@@ -688,3 +688,95 @@ h3 {
     display: grid;
 }
 
+/* Projects Section */
+
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+    gap: 20px; /* Adjust the space between cards */
+    margin: 20px 0; /* Vertical space for the whole grid */
+}
+
+/* Individual Project Card */
+.project-card {
+    background: #fff; /* Assuming a white background */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    overflow: hidden; /* Ensures the content doesn't spill out */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none;
+}
+
+.project-card:hover {
+    background-color: #f0f0f0; /* Lift effect on hover */
+    text-decoration: none;
+}
+
+/* Project Image */
+.project-card img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+}
+
+.project-card h3 {
+    display: flex; /* Aligns icon and text */
+    align-items: center; /* Vertically centers icon with text */
+    font-size: 16px; /* Text size */
+    padding: 10px; /* Padding inside the card */
+}
+
+.project-card h3 img {
+    width: 20px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Project Tags */
+.project-tags {
+    display: flex; /* Aligns tags in a row */
+    flex-wrap: wrap; /* Allows tags to wrap to the next line */
+    padding: 0 10px 10px; /* Padding on the sides and bottom inside the card */
+    gap: 5px; /* Space between tags */
+    justify-content: start; /* Align tags to the start of the card */
+}
+
+/* Individual Tag Badge */
+.tag-badge-domain {
+    display: inline-flex; /* Allows inline level with flex properties */
+    align-items: center; /* Vertical alignment */
+    padding-left: 6px; /* Padding inside the badge */
+    padding-right: 6px;
+    background-color: #daecda; /* Background color of the badge */
+    border-radius: 3px; /* Rounded corners for the badge */
+    font-size: 12px; /* Smaller font size for the tags */
+    white-space: nowrap; /* Prevents wrapping inside the badge */
+    color: #333; /* Text color for the tag */
+    margin-bottom: 5px; /* Space between rows of tags if they wrap */
+    line-height: 120%;
+    height: 18px;
+
+}
+
+/* Hover effect for the tag badge */
+.tag-badge:hover {
+    background-color: #d5d5d5; /* Slightly darker background on hover */
+}
+
+.tag-badge-platform {
+    display: inline-flex; /* Allows inline level with flex properties */
+    align-items: center; /* Vertical alignment */
+    padding-left: 6px; /* Padding inside the badge */
+    padding-right: 6px;
+    background-color:#d2e4ef; /* Background color of the badge */
+    border-radius: 3px; /* Rounded corners for the badge */
+    font-size: 12px; /* Smaller font size for the tags */
+    white-space: nowrap; /* Prevents wrapping inside the badge */
+    color: #333; /* Text color for the tag */
+    margin-bottom: 5px; /* Space between rows of tags if they wrap */
+    line-height: 120%;
+    height: 18px;
+
+}
