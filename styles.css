@@ -229,7 +229,7 @@ h2{
     font-weight: 600;
     color: #333;
 }
-.about-section {
+.about-section, .articles-section {
     max-width: 750px;
     margin: 0 auto; /* Centering the section */
 }
@@ -574,7 +574,7 @@ h3 {
 
 /* CSS for Skills Section */
 
-.tabs-container {
+.skills-tabs-container, .articles-tabs-container {
     display: flex;
     justify-content: flex-start; /* Adjust as needed */
     border-bottom: 1px solid #e2e0dd; /* Bottom border as a divider */
@@ -582,7 +582,7 @@ h3 {
     /* Additional container styling */
 }
 
-.tab {
+.skills-tab, .articles-tab {
     display: flex;
     align-items: center;
     padding: 4px 8px;
@@ -594,44 +594,50 @@ h3 {
     position: relative;
 }
 
-.tab img {
+.skills-tab img, .articles-tab img  {
     width: 16px; /* Adjust as per your icon size */
     height: auto;
     margin-right: 6px; /* Space between icon and text */
     filter: opacity(50%);
 }
 
-.tab-icon {
+.skills-tab-icon {
     color: #c14c8a;
 }
 
-.tab span {
+.skills-tab span, .articles-tab span {
     /* Additional text styling */
     color: #787774;
 }
 
-.tab.active img {
+.skills-tab.active img, .articles-tab.active img {
     filter: none;
 }
 
-.tab.active img,
-.tab.active span {
+.skills-tab.active img,
+.skills-tab.active span {
     color: #333; /* Color for active tabs */
     /* You may need to adjust if you're using images for icons */
 }
 
-.tab:hover {
+.articles-tab.active img,
+.articles-tab.active span {
+    color: #333; /* Color for active tabs */
+    /* You may need to adjust if you're using images for icons */
+}
+
+.articles-tab:hover, .articles-tab:hover {
     background-color: #f0f0f0; /* Example hover background color */
     border-radius: 4px; /* Rounded edges for hover effect */
 }
 
 /* Ensure that the hover effect does not apply to the active tab */
-.tab.active, .tab.active:hover {
+.skills-tab.active, .skills-tab.active:hover {
     background-color: transparent;
     /* Other active tab styles */
 }
 
-.tab.active::after {
+.skills-tab.active::after, .articles-tab.active::after {
     content: '';
     position: absolute;
     bottom: -9px; /* Shift from the bottom of the tab */
@@ -779,4 +785,60 @@ h3 {
     line-height: 120%;
     height: 18px;
 
+}
+
+/* Article Section */
+.articles-list {
+    padding-top: 16px;
+    padding-bottom: 4px;
+} 
+
+.article-item {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    padding: 6px; /* Space inside the item */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Keep text color consistent */
+}
+
+.article-item:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    border-radius: 4px;
+}
+
+.article-icon {
+    width: 24px; /* Adjust icon size */
+    height: auto;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.article-title {
+    margin-right: auto; /* Pushes the tag to the end */
+    border-bottom: 0.05em solid rgba(55,53,47,.25);
+}
+
+.article-tag {
+    background-color: #ffe2dd;
+    border-radius: 4px; /* Rounded corners for tag */
+    padding: 5px 10px; /* Padding inside the tag */
+    font-size: 0.8em; /* Smaller font size for tag */
+    margin-right: 4px;
+}
+
+.articles-container {
+    max-height: calc(7 * 40px); /* Adjust based on the height of your articles */
+    overflow-y: scroll;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Optional: Custom scrollbar styling */
+.articles-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.articles-container::-webkit-scrollbar-thumb {
+    background: #7877743e;
+    border-radius: 6px;
 }

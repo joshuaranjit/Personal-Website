@@ -59,18 +59,19 @@ document.querySelectorAll('.dropdown-button').forEach(button => {
     });
 });
 
-// Script for Tab Switching and Management
+
+// Script for Skills Tab Switching and Management
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.tab').forEach(tab => {
+    document.querySelectorAll('.skills-tab').forEach(tab => {
         tab.onclick = function() {
-            // Remove active class from all tabs and contents
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            // Remove active class from all skill tabs and contents
+            document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(c => {
                 c.style.display = 'none';
                 c.classList.remove('active');
             });
 
-            // Add active class to clicked tab and corresponding content
+            // Add active class to clicked skill tab and corresponding content
             this.classList.add('active');
             var contentId = 'content-' + this.id;
             var activeContent = document.getElementById(contentId);
@@ -79,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     });
 
-    // Set the default active tab and content on initial load
-    const defaultActiveTab = document.querySelector('.tab.active');
+    // Set the default active skill tab and content on initial load
+    const defaultActiveTab = document.querySelector('.skills-tab.active');
     if (defaultActiveTab) {
         var contentId = 'content-' + defaultActiveTab.id;
         var activeContent = document.getElementById(contentId);
@@ -88,3 +89,37 @@ document.addEventListener('DOMContentLoaded', function() {
         activeContent.classList.add('active');
     }
 });
+
+
+function filterArticles(sectionId, tag) {
+    // Convert the tag to lowercase to match the data-tags attribute values
+    const filterTag = tag.toLowerCase();
+
+    // Get all article items within a specific section
+    const articles = document.querySelectorAll(`#${sectionId} .article-item`);
+
+    // Loop through all articles and toggle their display based on the data-tags attribute
+    articles.forEach(article => {
+        // Make sure the article has the data-tags attribute
+        const articleTags = article.getAttribute('data-tags').toLowerCase();
+        if (filterTag === 'all' || articleTags.includes(filterTag)) {
+            article.style.display = 'flex'; // Change display to 'flex' or 'block' as per your layout
+        } else {
+            article.style.display = 'none';
+        }
+    });
+
+    // Update the active state for article tabs within the specified section
+    const tabs = document.querySelectorAll(`#${sectionId} .articles-tab`);
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('data-filter') === tag) {
+            tab.classList.add('active');
+        }
+    });
+}
+
+// Event listener to initialize the filter to 'all' on page load
+document.addEventListener('DOMContentLoaded', () => filterArticles('articles', 'all'));
+
+
