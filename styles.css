@@ -229,17 +229,17 @@ h2{
     font-weight: 600;
     color: #333;
 }
-.about-section, .articles-section {
+.about-section, .articles-section, .contact-section {
     max-width: 750px;
     margin: 0 auto; /* Centering the section */
 }
 
-.about-content {
+.about-content, .contact-content {
     display: flex;
     justify-content: space-between;
 }
 
-.about-text {
+.about-left, .contact-left {
     flex-basis: 55%;
     padding-right: 24px; /* Spacing between text and image */
     width: auto;
@@ -247,7 +247,7 @@ h2{
     flex-shrink: 1;
 }
 
-.about-right {
+.about-right, .contact-right {
     flex-basis: 45%;
     flex-shrink: 1;
     flex-grow: 2;
@@ -259,6 +259,8 @@ h2{
     height: auto; /* Maintain aspect ratio */
     /* Style as needed */
 }
+
+
 
 .profile-links {
     list-style-type: none; /* Removes default list styling */
@@ -292,12 +294,12 @@ h2{
     margin-right: 8px; /* Space between icon and text */
 }
 
-.about-text p {
+.about-left p, .contact-left p {
     font-weight: 300;
     line-height: 24px;
 }
 
-.about-text strong {
+.about-left strong {
     font-weight: 500;
 }
 
@@ -497,6 +499,10 @@ h3 {
     height: 1000px; /* Adjust the height as needed to test scrolling */
 }
 
+.scroll-test-footer {
+    height: 100px; /* Adjust the height as needed to test scrolling */
+}
+
 .role-description {
     padding-top: 0px;
     margin-top: 0px;
@@ -631,11 +637,11 @@ h3 {
     border-radius: 4px; /* Rounded edges for hover effect */
 }
 
-/* Ensure that the hover effect does not apply to the active tab */
-.skills-tab.active, .skills-tab.active:hover {
-    background-color: transparent;
-    /* Other active tab styles */
+.skills-tab:hover, .skills-tab:hover {
+    background-color: #f0f0f0; /* Example hover background color */
+    border-radius: 4px; /* Rounded edges for hover effect */
 }
+
 
 .skills-tab.active::after, .articles-tab.active::after {
     content: '';
@@ -842,3 +848,77 @@ h3 {
     background: #7877743e;
     border-radius: 6px;
 }
+
+/* Contact Form Styling */
+
+.form-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: 'Noto Sans';
+
+}
+  
+  .form-control:focus {
+    border-color: #6658d3; /* Or any color that fits your design */
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 88, 211, 0.5); /* Optional: Adds a glow effect on focus */
+  }
+  
+  .submit-button {
+    background-color: #6658d3; /* Or any color that fits your design */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    outline: none;
+
+  }
+  
+  .submit-button:hover {
+    background-color: #5848b8; /* Darken button color on hover */
+  }
+  
+  .submit-button .arrow-icon {
+    width: 20px; /* Width of your arrow icon */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Adjust the placeholder color as needed */
+  ::placeholder {
+    color: #888888c2;
+    font-weight: 500;
+  }
+
+  .form-control-textarea {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    resize: vertical;
+    max-height: 300px; /* 3 times the default height, adjust as needed */
+    font-family: 'Noto Sans';
+  }
+
+  .form-control-textarea:focus{
+    border-color: #6658d3; /* Or any color that fits your design */
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 88, 211, 0.5); 
+    font-family: 'Noto Sans';
+  }
+  
+  .contact-left p {
+    margin-top: 0px;
+  }

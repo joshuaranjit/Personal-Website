@@ -68,7 +68,7 @@
         <h2>About</h2>
         <div class="about-content">
 
-            <div class="about-text">
+            <div class="about-left">
                 
                 <p class="Hi-there-p">Hi There!</p>
 
@@ -132,6 +132,15 @@
                     </div>
                 </a>
                 <!-- Repeat similar structure for other project cards -->    
+
+                <a href="project-detail-link.html" target="_blank" class="project-card">
+                    <img src="assets/ImageGallery/Projects-Section/indoor.png" alt="Indoor Navigation AR">
+                    <h3><img src="assets/images/Icons/location.svg" alt="Location Arrow"> AR Indoor Navigation System</h3>
+                    <div class="project-tags">
+                        <p class="tag-badge-domain">Tag1</p>
+                        <p class="tag-badge-platform">Tag2</p>
+                    </div>
+                </a>
 
     </section>
 
@@ -206,10 +215,33 @@
 
     </section>
 
+    <div class="divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Drop me a message</h2>
+        <div class="contact-content">
+            <div class="contact-left">
+                <p>If you're interested in learning more, proposing collaborations, or have any other inquiries, please don't hesitate to <strong>contact me</strong>.</p>
+            </div>
+            <div class="contact-right">
+                <form action="https://formspree.io/f/mqkraovq" method="POST">
+                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                    <input type="email" name="_replyto" class="form-control" placeholder="Email" required>
+                    <textarea name="message" class="form-control-textarea" placeholder="Message" maxlength="300" required rows="3"></textarea>
+                    <button type="submit" class="submit-button">Send 
+                        <img src="assets/images/Icons/arrow-right-white.svg" alt=">" class="arrow-icon">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
     
 
     <div class="divider"></div>
-    <div class="scroll-test"></div>
+    <div class="scroll-test-footer"></div>
     <script src="script.js"></script>
     
 </body>
