@@ -736,14 +736,20 @@ h3 {
 .project-card h3 {
     display: flex; /* Aligns icon and text */
     align-items: center; /* Vertically centers icon with text */
-    font-size: 16px; /* Text size */
+    font-size: 14px; /* Text size */
     padding: 10px; /* Padding inside the card */
+    font-weight: 500;
+    line-height: 1.5;
+    min-height: 21px;
+    padding-bottom: 0px;
+
 }
 
 .project-card h3 img {
-    width: 20px; /* Icon size */
+    width: 18px; /* Icon size */
     height: auto; /* Maintain aspect ratio */
     margin-right: 8px; /* Space between icon and text */
+
 }
 
 /* Project Tags */
@@ -802,7 +808,7 @@ h3 {
 .article-item {
     display: flex;
     align-items: center; /* Vertical center alignment */
-    padding: 6px; /* Space inside the item */
+    padding: 4px; /* Space inside the item */
     transition: background-color 0.3s ease; /* Smooth background transition */
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Keep text color consistent */
@@ -822,6 +828,8 @@ h3 {
 .article-title {
     margin-right: auto; /* Pushes the tag to the end */
     border-bottom: 0.05em solid rgba(55,53,47,.25);
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .article-tag {
@@ -922,3 +930,16 @@ h3 {
   .contact-left p {
     margin-top: 0px;
   }
+
+  /* Site Footer */
+  .site-footer {
+    text-align: center; /* Center the text */
+    width: 750px; /* Match the width of your sections */
+    margin: 0 auto; /* Center the footer */
+    padding: 0px; /* Top and bottom padding */
+    font-size: 14px; /* Font size */
+    color:#787774; /* Text color, or any other color you prefer */
+    /* Additional styles if needed */
+    line-height: 1.5;
+
+}
