@@ -122,4 +122,36 @@ function filterArticles(sectionId, tag) {
 // Event listener to initialize the filter to 'all' on page load
 document.addEventListener('DOMContentLoaded', () => filterArticles('articles', 'all'));
 
+// JavaScript function to switch tabs and show the related content - Professional Development
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to switch tabs
+    function switchTab(tab) {
+        // Remove active class from all tabs
+        document.querySelectorAll('.professional-tab').forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content-professional').forEach(c => c.style.display = 'none');
+        
+        // Show the content that matches the clicked tab's filter
+        const filter = tab.getAttribute('data-filter');
+        document.querySelector(`.tab-content-professional[data-category="${filter}"]`).style.display = 'block';
+    }
+
+    // Add click event listeners to tabs
+    document.querySelectorAll('.professional-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            switchTab(this);
+        });
+    });
+
+    // Initialize the default active tab
+    const defaultActiveTab = document.querySelector('.professional-tab.active');
+    if (defaultActiveTab) {
+        switchTab(defaultActiveTab);
+    }
+});
+
 

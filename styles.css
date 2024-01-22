@@ -229,7 +229,7 @@ h2{
     font-weight: 600;
     color: #333;
 }
-.about-section, .articles-section, .contact-section {
+.about-section, .articles-section, .contact-section ,.professional-development-section{
     max-width: 750px;
     margin: 0 auto; /* Centering the section */
 }
@@ -580,7 +580,7 @@ h3 {
 
 /* CSS for Skills Section */
 
-.skills-tabs-container, .articles-tabs-container {
+.skills-tabs-container, .articles-tabs-container, .professional-tabs-container {
     display: flex;
     justify-content: flex-start; /* Adjust as needed */
     border-bottom: 1px solid #e2e0dd; /* Bottom border as a divider */
@@ -588,7 +588,7 @@ h3 {
     /* Additional container styling */
 }
 
-.skills-tab, .articles-tab {
+.skills-tab, .articles-tab, .professional-tab {
     display: flex;
     align-items: center;
     padding: 4px 8px;
@@ -600,7 +600,7 @@ h3 {
     position: relative;
 }
 
-.skills-tab img, .articles-tab img  {
+.skills-tab img, .articles-tab img, .professional-tab img  {
     width: 16px; /* Adjust as per your icon size */
     height: auto;
     margin-right: 6px; /* Space between icon and text */
@@ -611,39 +611,38 @@ h3 {
     color: #c14c8a;
 }
 
-.skills-tab span, .articles-tab span {
+.skills-tab span, .articles-tab span, .professional-tab span {
     /* Additional text styling */
     color: #787774;
 }
 
-.skills-tab.active img, .articles-tab.active img {
+.skills-tab.active img, .articles-tab.active img, .professional-tab.active img {
     filter: none;
 }
 
-.skills-tab.active img,
+
 .skills-tab.active span {
     color: #333; /* Color for active tabs */
     /* You may need to adjust if you're using images for icons */
 }
 
-.articles-tab.active img,
+
 .articles-tab.active span {
     color: #333; /* Color for active tabs */
     /* You may need to adjust if you're using images for icons */
 }
 
-.articles-tab:hover, .articles-tab:hover {
+.professional-tab.active span {
+    color:#333
+}
+
+.articles-tab:hover, .professional-tab:hover, .skills-tab:hover {
     background-color: #f0f0f0; /* Example hover background color */
     border-radius: 4px; /* Rounded edges for hover effect */
 }
 
-.skills-tab:hover, .skills-tab:hover {
-    background-color: #f0f0f0; /* Example hover background color */
-    border-radius: 4px; /* Rounded edges for hover effect */
-}
 
-
-.skills-tab.active::after, .articles-tab.active::after {
+.skills-tab.active::after, .articles-tab.active::after, .professional-tab.active::after {
     content: '';
     position: absolute;
     bottom: -9px; /* Shift from the bottom of the tab */
@@ -941,5 +940,83 @@ h3 {
     color:#787774; /* Text color, or any other color you prefer */
     /* Additional styles if needed */
     line-height: 1.5;
+
+}
+
+/* Professional Development Section  */
+
+.tab-content-professional {
+
+    margin-bottom: 12px;
+}
+
+.certification-card {
+    display: flex;
+    width: 100%;
+    align-items: center; /* Align items vertically */
+    padding: 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card */
+    border-radius: 4px;
+    margin-top: 16px;
+
+}
+
+.certification-image-link {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 30%;
+}
+
+.certification-thumbnail {
+    width: 100%;
+    cursor: pointer; /* To indicate the image is clickable */
+    margin-right: 15px; /* Space between image and details */
+}
+
+.certification-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    padding-left:40px;
+}
+
+.issuer-logo {
+    width: 50px; /* Adjust to fit your design */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.certification-name,
+.issuer-name,
+.certificate-id,
+.issue-date {
+    margin-bottom: 4px;
+    font-size: 14px;
+    margin-top: 0px;
+    text-decoration: none;
+}
+
+.certificate-id,
+.issue-date {
+    color: #787774
+}
+.certification-name{
+    font-size: 18px;
+}
+
+.issuer-text{
+    color: #77aad6; /* Default link color, adjust as needed */
+    border-bottom: 0.05em solid rgba(55,53,47,.25);
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+
+}
+
+.issuer-text:hover {
+    background-color: #f0f0f0;
 
 }
