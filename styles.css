@@ -278,12 +278,15 @@ h2{
     align-items: left;
     text-decoration: none;
     color: inherit; /* Adjust as needed */
-    padding: 4px 8px;
+    padding: 0px 8px;
     background-color: transparent;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
+.profile-link-text{
+    border-bottom: 0.05em solid rgba(55,53,47,.25);
+}
 .profile-link:hover {
     background-color: #f0f0f0; /* Grey background on hover */
 }
@@ -585,6 +588,7 @@ h3 {
     justify-content: flex-start; /* Adjust as needed */
     border-bottom: 1px solid #e2e0dd; /* Bottom border as a divider */
     padding-bottom: 8px;
+    
     /* Additional container styling */
 }
 
