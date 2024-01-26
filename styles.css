@@ -138,13 +138,23 @@ nav {
     padding-top: 80px;
 }
 
-h1 {
+.intro-heading {
+    display: flex; /* Aligns children inline */
+    align-items: center; /* Vertically centers the items */
+    justify-content: left; /* Horizontally centers the items */
+    flex-wrap: nowrap; /* Prevents wrapping to ensure single-line */
+    white-space: nowrap; /* Ensures text does not wrap */
+    gap: 8px; /* Optional: space between items */
+}
+
+h1, .heading-divider {
     font-size: 40px;
     font-weight: 700;
     display: block;
     /* padding-left: 4px; */
     color: #333;
 }
+
 
 /* Callout Design */
 
@@ -1022,5 +1032,96 @@ h3 {
 
 .issuer-text:hover {
     background-color: #f0f0f0;
+
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size: 3rem;
+        
+    }
+
+    .nav-lastupdated {
+        display: none;
+    }
+
+    .home-link {
+        padding: 13px 10px;
+    }
+
+    .heading-divider {
+        display: none;
+    }
+
+    .intro-heading {
+        display: block;
+    }
+
+    #lighter-heading {
+        padding-top: 4px;
+        font-weight: 200;
+        font-size: 24px;
+        margin-top: 0px;
+        margin-bottom: 16px;
+        font-size: 2rem;
+
+    }
+
+    .intro-heading h1 {
+        margin-bottom: 0px;
+    }
+
+    .about-callout {
+        width: 80%;
+        margin: 0 auto; /* Center the div */
+    }
+
+    .divider {
+        max-width: 85%;
+        margin: 20px auto; /* Spacing above and below */
+    }
+
+    .link-container {
+        max-width: 90%;
+        flex-direction: column;
+        align-items: left;
+        margin: 0 auto;
+    }
+
+    .link-container .custom-link {
+        margin-bottom: 10px;
+    }
+    
+    .navbar-content{
+        width: 100%;
+    }
+
+    .content-container, .about-section, .projects-section, .articles-section, .contact-section, .site-footer {
+        width: 85%;
+        margin:  0 auto;
+        overflow-x: hidden;
+    }
+
+    .about-content, .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-right {
+        width: 90%;
+    }
+
+    .projects-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px; /* Adjust as needed */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .project-card {
+        flex: 0 0 85%; /* Adjust width as needed */
+        scroll-snap-align: start;
+    }
 
 }
