@@ -158,7 +158,7 @@ h1, .heading-divider {
 
 /* Callout Design */
 
-.about-callout {
+.about-callout-index, .about-callout-resume {
     background-color: #e6f3f7; /* Background color */
     border-radius: 4px; /* Border radius */
     padding: 16px; /* Padding on all sides */
@@ -199,6 +199,14 @@ h1, .heading-divider {
     border-top: 1px solid #e2e0dd; /* Solid line, adjust color as needed */
     margin: 10px auto; /* Spacing above and below */
     z-index: 2;
+}
+
+.inner-divider-mobileonly {
+    width: 100%;
+    border-top: 1px solid #e2e0dd; /* Solid line, adjust color as needed */
+    margin: 10px auto; /* Spacing above and below */
+    z-index: 2;
+    display: none;
 }
 
 /* Inner - nav styling*/
@@ -619,10 +627,6 @@ h3 {
     height: auto;
     margin-right: 6px; /* Space between icon and text */
     filter: opacity(50%);
-}
-
-.skills-tab-icon {
-    color: #c14c8a;
 }
 
 .skills-tab span, .articles-tab span, .professional-tab span {
@@ -1072,7 +1076,7 @@ h3 {
         margin-bottom: 0px;
     }
 
-    .about-callout {
+    .about-callout-index {
         width: 80%;
         margin: 0 auto; /* Center the div */
     }
@@ -1122,6 +1126,37 @@ h3 {
     .project-card {
         flex: 0 0 85%; /* Adjust width as needed */
         scroll-snap-align: start;
+    }
+
+    /* Resume Page - Mobile CSS Responsive */
+
+    .resume-index, .experience-section, .education-section, .skills-section, .professional-development-section {
+        width: 85%;
+        margin:  0 auto;
+        overflow-x: hidden;
+    }
+
+    .experience-details, .education-item, .degree-details {
+        flex-direction: column;
+    }
+
+    .inner-divider-mobileonly {
+        display: block;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    .right-column {
+        margin-top: 16px;
+        padding-left: 0px;
+    }
+
+    .about-callout-resume {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 16px;
     }
 
 }

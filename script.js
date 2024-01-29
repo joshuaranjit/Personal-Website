@@ -155,3 +155,42 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// js for More tabs
+
+function updateTabsVisibility() {
+    const tabsContainer = document.querySelector('.skills-tabs-container');
+    const moreIcon = document.querySelector('.skills-more');
+    const dropdown = document.querySelector('.skills-dropdown');
+    dropdown.innerHTML = ''; // Clear previous items
+
+    let overflow = false;
+    let totalWidth = moreIcon.offsetWidth;
+
+    tabsContainer.querySelectorAll('.skills-tab').forEach(tab => {
+        totalWidth += tab.offsetWidth;
+        if (totalWidth > tabsContainer.offsetWidth) {
+            overflow = true;
+            const dropdownTab = tab.cloneNode(true);
+            dropdown.appendChild(dropdownTab);
+            dropdownTab.addEventListener('click', handleTabClick);
+            tab.style.display = 'none';
+        } else {
+            tab.style.display = 'flex';
+        }
+    });
+
+    moreIcon.style.display = overflow ? 'flex' : 'none';
+}
+
+// Event Listener for tab clicks
+function handleTabClick(event) {
+    // Implement tab switch logic
+}
+
+document.querySelector('.skills-more img').addEventListener('click', function() {
+    document.querySelector('.skills-dropdown').classList.toggle('show');
+});
+
+window.addEventListener('resize', updateTabsVisibility);
+updateTabsVisibility(); // Initial call
+
