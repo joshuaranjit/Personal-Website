@@ -606,8 +606,14 @@ h3 {
     justify-content: flex-start; /* Adjust as needed */
     border-bottom: 1px solid #e2e0dd; /* Bottom border as a divider */
     padding-bottom: 8px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
     
     /* Additional container styling */
+}
+
+.skills-tabs-container::-webkit-scrollbar {
+    display: none;
 }
 
 .skills-tab, .articles-tab, .professional-tab {
@@ -617,6 +623,7 @@ h3 {
     cursor: pointer;
     margin: 0 4px;
     font-size: 14px;
+    
 
     /* Additional tab styling */
     position: relative;
@@ -632,6 +639,7 @@ h3 {
 .skills-tab span, .articles-tab span, .professional-tab span {
     /* Additional text styling */
     color: #787774;
+    white-space: nowrap;
 }
 
 .skills-tab.active img, .articles-tab.active img, .professional-tab.active img {
@@ -1158,5 +1166,4 @@ h3 {
         width: 100%;
         margin-bottom: 16px;
     }
-
 }
