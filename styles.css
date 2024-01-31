@@ -612,7 +612,7 @@ h3 {
     /* Additional container styling */
 }
 
-.skills-tabs-container::-webkit-scrollbar {
+.skills-tabs-container::-webkit-scrollbar,.articles-tabs-container::-webkit-scrollbar,.professional-tabs-container::-webkit-scrollbar  {
     display: none;
 }
 
@@ -1165,5 +1165,48 @@ h3 {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 16px;
+    }
+
+    .tab-content.active {
+        padding-left: 12px;
+    }
+
+    .card {
+        width: 85%;
+    }
+
+    /* Hide the thumbnail image link */
+    .certification-image-link {
+        display: none;
+    }
+
+    /* Adjust the card details for mobile view */
+    .certification-details {
+        width: 100%; /* Take up full width since the image is hidden */
+        padding-left: 12px; /* Adjust padding as needed */
+        padding-right: 12px; /* Adjust padding as needed */
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    /* Container for the certification cards */
+    .tab-content-professional {   
+        position: relative;     
+        display: flex; /* Make the container a flexbox */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Enable snap effect when scrolling */
+        padding: 10px ; /* Add some vertical padding */
+    }
+
+    /* Individual certification cards */
+    .certification-card {
+        flex: 0 0 auto; /* Don't grow or shrink, but allow basis to be auto */
+        scroll-snap-align: start; /* Align to start of the scroll container */
+        margin-right: 16px; /* Add some space between cards */
+        width: calc(100% - 32px); /* Subtract margin from 100% to avoid overflow */
+
+
+
+        
     }
 }

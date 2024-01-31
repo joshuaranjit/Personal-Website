@@ -131,13 +131,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.professional-tab').forEach(t => t.classList.remove('active'));
         // Add active class to clicked tab
         tab.classList.add('active');
-
+    
         // Hide all tab contents
         document.querySelectorAll('.tab-content-professional').forEach(c => c.style.display = 'none');
         
         // Show the content that matches the clicked tab's filter
         const filter = tab.getAttribute('data-filter');
-        document.querySelector(`.tab-content-professional[data-category="${filter}"]`).style.display = 'block';
+        const targetContent = document.querySelector(`.tab-content-professional[data-category="${filter}"]`);
+    
+        // Check if the screen width is 768px or less
+        if (window.innerWidth <= 768) {
+            // It's a mobile screen, set display to flex
+            targetContent.style.display = 'flex';
+        } else {
+            // It's a non-mobile screen, set display to block
+            targetContent.style.display = 'block';
+        }
     }
 
     // Add click event listeners to tabs
@@ -152,5 +161,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (defaultActiveTab) {
         switchTab(defaultActiveTab);
     }
+
+    window.addEventListener('resize', function() {
+        const activeTab = document.querySelector('.professional-tab.active');
+        if (activeTab) {
+            switchTab(activeTab);
+        }
+    })
 });
 
