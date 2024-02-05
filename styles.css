@@ -1205,8 +1205,5 @@ h3 {
         margin-right: 16px; /* Add some space between cards */
         width: calc(100% - 32px); /* Subtract margin from 100% to avoid overflow */
 
-
-
-        
     }
 }
