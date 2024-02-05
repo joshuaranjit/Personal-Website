@@ -17,6 +17,19 @@ nav {
     width: 100%;
 }
 
+.development-banner {
+    background-color: #ffe2dd; /* Yellow background color */
+    color: #37352f; /* Dark text color for contrast */
+    text-align: center; /* Center the text inside the banner */
+    padding: 10px 0; /* Add some padding to increase space inside the banner */
+    font-weight: 400; /* Make the text bold */
+    width: 100%; /* Ensure the banner spans the full width of the viewport */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow for depth */
+    position: sticky; /* Stick the banner below the navbar */
+    top: 45px; /* Adjust this value based on the height of your navbar */
+    z-index: 999; /* Ensure the banner stays on top of other content */
+}
+
 .navbar-content {
     display: flex;
     justify-content: space-between;
