@@ -170,3 +170,17 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 });
 
+// adding confetti effects to download CV
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('downloadCV').addEventListener('click', function() {
+        // Delay the confetti animation by 1.5 seconds
+        setTimeout(function() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }, 1000); // 1500 milliseconds = 1.5 seconds
+    });
+});
+
