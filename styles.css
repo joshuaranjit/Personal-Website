@@ -612,6 +612,10 @@ h3 {
     padding-bottom: 12px;
 }
 
+.recognitions p{
+    padding-bottom: 4px;
+}
+
 /* CSS for Skills Section */
 
 .skills-tabs-container, .articles-tabs-container, .professional-tabs-container {
