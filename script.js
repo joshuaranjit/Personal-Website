@@ -184,3 +184,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Amplitude tracking for project card clicks
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(function(card, index) {
+        card.addEventListener('click', function() {
+            // Assuming amplitude.track is available for use directly
+            const projectName = this.querySelector('h3') ? this.querySelector('h3').innerText : `Project ${index + 1}`;
+            amplitude.track('Project Card Clicked', { projectName: projectName });
+        });
+    });
+});
+
+// amplitude tracking for article clicks
+document.querySelectorAll('.article-item').forEach(function(article) {
+    article.addEventListener('click', function() {
+        // Use the article title or some unique identifier as part of the event properties
+        var articleTitle = this.querySelector('.article-title').innerText;
+        amplitude.track('Article Opened', { title: articleTitle });
+    });
+});
+
+
