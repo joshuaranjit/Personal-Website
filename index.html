@@ -1,59 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joshua Ranjit</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- Amplitude Code Snippet -->
     <script type="text/javascript">
-        !function(){"use strict";!function(e,t){var n=e.amplitude||{_q:[],_iq:{}};if(n.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var r=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,n){return function(r){e._q.push({name:t,args:Array.prototype.slice.call(n,0),resolve:r})}},o=function(e,t,n){e[t]=function(){if(n)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var n=0;n<g.length;n++)o(e,g[n],!0)};n.invoked=!0;var u=t.createElement("script");u.type="text/javascript",u.integrity="sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);for(var c=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<p.length;l++)r(c,p[l]);n.Identify=c;for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);n.Revenue=d;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
-        
-        amplitude.init('2191df53fd80f4153de7a46e5d57b637');
-    </script>
+      !(function () {
+        "use strict";
+        !(function (e, t) {
+          var n = e.amplitude || { _q: [], _iq: {} };
+          if (n.invoked)
+            e.console &&
+              console.error &&
+              console.error("Amplitude snippet has been loaded.");
+          else {
+            var r = function (e, t) {
+                e.prototype[t] = function () {
+                  return (
+                    this._q.push({
+                      name: t,
+                      args: Array.prototype.slice.call(arguments, 0),
+                    }),
+                    this
+                  );
+                };
+              },
+              s = function (e, t, n) {
+                return function (r) {
+                  e._q.push({
+                    name: t,
+                    args: Array.prototype.slice.call(n, 0),
+                    resolve: r,
+                  });
+                };
+              },
+              o = function (e, t, n) {
+                e[t] = function () {
+                  if (n)
+                    return {
+                      promise: new Promise(
+                        s(e, t, Array.prototype.slice.call(arguments))
+                      ),
+                    };
+                };
+              },
+              i = function (e) {
+                for (var t = 0; t < m.length; t++) o(e, m[t], !1);
+                for (var n = 0; n < g.length; n++) o(e, g[n], !0);
+              };
+            n.invoked = !0;
+            var u = t.createElement("script");
+            (u.type = "text/javascript"),
+              (u.integrity =
+                "sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE"),
+              (u.crossOrigin = "anonymous"),
+              (u.async = !0),
+              (u.src =
+                "https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz"),
+              (u.onload = function () {
+                e.amplitude.runQueuedFunctions ||
+                  console.log("[Amplitude] Error: could not load SDK");
+              });
+            var a = t.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(u, a);
+            for (
+              var c = function () {
+                  return (this._q = []), this;
+                },
+                p = [
+                  "add",
+                  "append",
+                  "clearAll",
+                  "prepend",
+                  "set",
+                  "setOnce",
+                  "unset",
+                  "preInsert",
+                  "postInsert",
+                  "remove",
+                  "getUserProperties",
+                ],
+                l = 0;
+              l < p.length;
+              l++
+            )
+              r(c, p[l]);
+            n.Identify = c;
+            for (
+              var d = function () {
+                  return (this._q = []), this;
+                },
+                f = [
+                  "getEventProperties",
+                  "setProductId",
+                  "setQuantity",
+                  "setPrice",
+                  "setRevenue",
+                  "setRevenueType",
+                  "setEventProperties",
+                ],
+                v = 0;
+              v < f.length;
+              v++
+            )
+              r(d, f[v]);
+            n.Revenue = d;
+            var m = [
+                "getDeviceId",
+                "setDeviceId",
+                "getSessionId",
+                "setSessionId",
+                "getUserId",
+                "setUserId",
+                "setOptOut",
+                "setTransport",
+                "reset",
+                "extendSession",
+              ],
+              g = [
+                "init",
+                "add",
+                "remove",
+                "track",
+                "logEvent",
+                "identify",
+                "groupIdentify",
+                "setGroup",
+                "revenue",
+                "flush",
+              ];
+            i(n),
+              (n.createInstance = function (e) {
+                return (n._iq[e] = { _q: [] }), i(n._iq[e]), n._iq[e];
+              }),
+              (e.amplitude = n);
+          }
+        })(window, document);
+      })();
 
-</head>
-<body>
+      amplitude.init("2191df53fd80f4153de7a46e5d57b637");
+    </script>
+  </head>
+  <body>
     <header>
-        <nav>
-            <!-- Master Navbar -->
-            <div class="navbar-content">
-                <a href="index.html" class="home-link">
-                    <img src="assets/images/josh_memoji.png" alt="memoji" class="navbar-memoji">
-                    <span class="navbar-name">Joshua Ranjit</span>
-                </a>
-                    <div class="nav-lastupdated">
-                        <span class="navbar-date">
-                            <span id="dynamicLastUpdated"></span>
-                            <span class="tooltip" id="exactDate">Static Date</span>
-                        </span>
-                    </div>                    
-            </div>
-            <!-- under Development Banner -->
-            <div class="development-banner">
-                Website under development 🚧
-            </div>
-        </nav>
-        
+      <nav>
+        <!-- Master Navbar -->
+        <div class="navbar-content">
+          <a href="index.html" class="home-link">
+            <img
+              src="assets/images/josh_memoji.png"
+              alt="memoji"
+              class="navbar-memoji"
+            />
+            <span class="navbar-name">Joshua Ranjit</span>
+          </a>
+          <div class="nav-lastupdated">
+            <span class="navbar-date">
+              <span id="dynamicLastUpdated"></span>
+              <span class="tooltip" id="exactDate">Static Date</span>
+            </span>
+          </div>
+        </div>
+        <!-- under Development Banner -->
+        <div class="development-banner">Website under development 🚧</div>
+      </nav>
     </header>
 
     <!-- Header content -->
     <div class="content-container">
-        <img src="assets/images/josh_memoji.png" alt="Memoji" class="memoji-image">
-        <div class="intro-heading">
-            <h1>Joshua Ranjit</h1><span class="heading-divider">|</span><h1 id="lighter-heading">Product Manager</h1>
-        </div>
+      <img
+        src="assets/images/josh_memoji.png"
+        alt="Memoji"
+        class="memoji-image"
+      />
+      <div class="intro-heading">
+        <h1>Joshua Ranjit</h1>
+        <span class="heading-divider">|</span>
+        <h1 id="lighter-heading">Product Manager</h1>
+      </div>
     </div>
 
     <!-- About callout -->
     <div class="about-callout-index">
-        <span class="callout-emoji">📢</span>
-        <span class="callout-text">5+ Years Building Web SaaS & Mobile Products in Construction, GIS & XR Industry | CSM & Azure Certified | AI enthusiast</span>
+      <span class="callout-emoji">📢</span>
+      <span class="callout-text"
+        >5+ Years Building Web SaaS & Mobile Products in Construction, GIS & XR
+        Industry | CSM & Azure Certified | AI enthusiast</span
+      >
     </div>
 
     <!-- Divider -->
@@ -61,67 +204,147 @@
 
     <!-- Inner nav -->
     <div class="link-container">
-        <a href="https://calendly.com/joshua-ranjit/45min-meeting" target="_blank" class="custom-link">
-            <i class="icon">🤝</i> <!-- Replace with your icon -->
-            <span class="link-content-styling">Book a Meeting</span>
-        </a>
-        <a href="resume.html" class="custom-link">
-            <img src="assets/images/Icons/resume.svg" alt="memoji" class="navbar-memoji">
-            <span class="link-content-styling">Resume</span>
-        </a>
-        <a href="assets/Resume/Live/Joshua-Resume-Feb24.pdf" download="Joshua_Ranjit_CV" id="downloadCV" class="custom-link">
-            <img src="assets/images/Icons/pdf.svg" alt="memoji" class="navbar-memoji">
-            <span class="link">Download CV</span>
-        </a>
+      <a
+        href="https://calendly.com/joshua-ranjit/45min-meeting"
+        target="_blank"
+        class="custom-link"
+      >
+        <i class="icon">🤝</i>
+        <!-- Replace with your icon -->
+        <span class="link-content-styling">Book a Meeting</span>
+      </a>
+      <a href="resume.html" class="custom-link">
+        <img
+          src="assets/images/Icons/resume.svg"
+          alt="memoji"
+          class="navbar-memoji"
+        />
+        <span class="link-content-styling">Resume</span>
+      </a>
+      <a
+        href="assets/Resume/Live/Joshua-Resume-Apr24.pdf"
+        download="Joshua_Ranjit_CV"
+        id="downloadCV"
+        class="custom-link"
+      >
+        <img
+          src="assets/images/Icons/pdf.svg"
+          alt="memoji"
+          class="navbar-memoji"
+        />
+        <span class="link">Download CV</span>
+      </a>
     </div>
 
-<!-- Divider -->
-<div class="divider"></div>
+    <!-- Divider -->
+    <div class="divider"></div>
 
     <!-- About section -->
     <div class="about-section">
-        <h2>About</h2>
-        <div class="about-content">
+      <h2>About</h2>
+      <div class="about-content">
+        <div class="about-left">
+          <p class="Hi-there-p">Hi There!</p>
 
-            <div class="about-left">
-                
-                <p class="Hi-there-p">Hi There!</p>
+          <p>
+            I'm <strong>Joshua</strong>, a dynamic
+            <strong class="pink-strong">Product Manager</strong> based in
+            <strong>Chennai, India</strong>. My career has been a journey
+            through the realms of <strong>design</strong>,
+            <strong>technology</strong>, and
+            <strong>domain expertise in</strong>
+            <strong class="pink-strong">Construction</strong>,<strong
+              class="pink-strong"
+            >
+              GIS</strong
+            >, and <strong class="pink-strong">XR</strong>. As an Agile
+            practitioner with <strong>CSM</strong> certification, I've
+            skillfully navigated the dynamic world of product development,
+            blending technical know-how with
+            <strong>cloud platform expertise</strong>, notably
+            <strong>Azure</strong>, to foster innovative and practical
+            solutions.
+          </p>
 
-                    <p>I'm <strong>Joshua</strong>, a dynamic <strong class="pink-strong">Product Manager</strong> based in <strong>Chennai, India</strong>. My career has been a journey through the realms of <strong>design</strong>, <strong>technology</strong>, and <strong>domain expertise in</strong> <strong class="pink-strong">Construction</strong>,<strong class="pink-strong"> GIS</strong>, and <strong class="pink-strong">XR</strong>. As an Agile practitioner with <strong>CSM</strong> certification, I've skillfully navigated the dynamic world of product development, blending technical know-how with <strong>cloud platform expertise</strong>, notably <strong>Azure</strong>, to foster innovative and practical solutions.</p>
-
-                    <p>When I'm not immersed in tech, you'll find me exploring the realms of <strong class="pink-strong">books, philosophy, personal finance</strong>, and <strong>health</strong>. I balance my professional pursuits with a love for <strong>sports and gym workouts</strong>. This space is where I merge my professional achievements with my personal passions, <strong>inviting you to explore the diverse and vibrant tapestry of my life and career.</strong></p>
-
-            </div>
-            <div class="about-right">
-                <img src="assets/images/Joshua_DP.jpg" alt="Your Name" class="about-image">
-                <ul class="profile-links">
-                    <!-- linkedin -->
-                    <li><a href="https://www.linkedin.com/in/joshuare/" target="_blank" class="custom-link profile-link">
-                        <img src="assets/images/Icons/linkedin.svg" alt="LinkedIn" class="profile-icon"><span class="profile-link-text">Linkedin</span></a>
-                    </li>
-                    <!-- github-->
-                    <li><a href="https://github.com/joshuaranjit" target="_blank" class="custom-link profile-link">
-                        <img src="assets/images/Icons/github.svg" alt="GitHub" class="profile-icon"><span class="profile-link-text">GitHub</span></a>
-                    </li>
-                    <!-- More links as needed -->
-                    <!-- topmate-->
-                    <li><a href="https://topmate.io/joshua_ranjit" target="_blank" class="custom-link profile-link">
-                        <img src="assets/images/Icons/topmate.png" alt="Topmate" class="profile-icon"><span class="profile-link-text">Topmate.io</span></a>
-                    </li>
-                </ul>
-            </div>
+          <p>
+            When I'm not immersed in tech, you'll find me exploring the realms
+            of
+            <strong class="pink-strong"
+              >books, philosophy, personal finance</strong
+            >, and <strong>health</strong>. I balance my professional pursuits
+            with a love for <strong>sports and gym workouts</strong>. This space
+            is where I merge my professional achievements with my personal
+            passions,
+            <strong
+              >inviting you to explore the diverse and vibrant tapestry of my
+              life and career.</strong
+            >
+          </p>
         </div>
+        <div class="about-right">
+          <img
+            src="assets/images/Joshua_DP.jpg"
+            alt="Your Name"
+            class="about-image"
+          />
+          <ul class="profile-links">
+            <!-- linkedin -->
+            <li>
+              <a
+                href="https://www.linkedin.com/in/joshuare/"
+                target="_blank"
+                class="custom-link profile-link"
+              >
+                <img
+                  src="assets/images/Icons/linkedin.svg"
+                  alt="LinkedIn"
+                  class="profile-icon"
+                /><span class="profile-link-text">Linkedin</span></a
+              >
+            </li>
+            <!-- github-->
+            <li>
+              <a
+                href="https://github.com/joshuaranjit"
+                target="_blank"
+                class="custom-link profile-link"
+              >
+                <img
+                  src="assets/images/Icons/github.svg"
+                  alt="GitHub"
+                  class="profile-icon"
+                /><span class="profile-link-text">GitHub</span></a
+              >
+            </li>
+            <!-- More links as needed -->
+            <!-- topmate-->
+            <li>
+              <a
+                href="https://topmate.io/joshua_ranjit"
+                target="_blank"
+                class="custom-link profile-link"
+              >
+                <img
+                  src="assets/images/Icons/topmate.png"
+                  alt="Topmate"
+                  class="profile-icon"
+                /><span class="profile-link-text">Topmate.io</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-<!-- Divider -->
-<div class="divider"></div>
+    <!-- Divider -->
+    <div class="divider"></div>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <!-- Project Cards will be added here -->
-            <!-- <a href="project-detail-link.html" target="_blank" class="project-card">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project Cards will be added here -->
+        <!-- <a href="project-detail-link.html" target="_blank" class="project-card">
                 <img src="assets/ImageGallery/Projects-Section/indoor.png" alt="Indoor Navigation AR">
                 <h3><img src="assets/images/Icons/location.svg" alt="Location Arrow"> AR Indoor Navigation System</h3>
                 <div class="project-tags">
@@ -129,81 +352,124 @@
                     <p class="tag-badge-platform">💻 Web</p>
                 </div>
             </a> -->
-                
-        </div>        
+      </div>
     </section>
 
     <div class="divider"></div>
 
     <!-- Articles Section -->
     <section id="articles" class="articles-section">
-        <h2>Articles</h2>
-    <!-- Filter Tabs -->
-        <div class="articles-tabs-container">
-            <div class="articles-tab active" data-filter="all" onclick="filterArticles('articles', 'all')">
-                <img src="assets/images/Icons/art-all.svg" class="tab-icon" alt="All Articles">
-                <span>All</span>
-            </div>
-            <div class="articles-tab" data-filter="case-study" onclick="filterArticles('articles', 'case-study')">
-                <img src="assets/images/Icons/art-case.svg" class="tab-icon" alt="CaseStudy">
-                <span>Case-Study</span>
-            </div>
-            <div class="articles-tab" data-filter="review" onclick="filterArticles('articles', 'review')">
-                <img src="assets/images/Icons/art-review.svg" class="tab-icon" alt="Reviews">
-                <span>Reviews</span>
-            </div>            
-            <!-- Repeat for other tabs -->
+      <h2>Articles</h2>
+      <!-- Filter Tabs -->
+      <div class="articles-tabs-container">
+        <div
+          class="articles-tab active"
+          data-filter="all"
+          onclick="filterArticles('articles', 'all')"
+        >
+          <img
+            src="assets/images/Icons/art-all.svg"
+            class="tab-icon"
+            alt="All Articles"
+          />
+          <span>All</span>
         </div>
+        <div
+          class="articles-tab"
+          data-filter="case-study"
+          onclick="filterArticles('articles', 'case-study')"
+        >
+          <img
+            src="assets/images/Icons/art-case.svg"
+            class="tab-icon"
+            alt="CaseStudy"
+          />
+          <span>Case-Study</span>
+        </div>
+        <div
+          class="articles-tab"
+          data-filter="review"
+          onclick="filterArticles('articles', 'review')"
+        >
+          <img
+            src="assets/images/Icons/art-review.svg"
+            class="tab-icon"
+            alt="Reviews"
+          />
+          <span>Reviews</span>
+        </div>
+        <!-- Repeat for other tabs -->
+      </div>
 
-        <div class="articles-container">
-            <div class="articles-list">
-                <!-- Article Item -->
-                <!-- <a href="article-link.html" target="_blank" class="article-item" data-tags="case-study">
+      <div class="articles-container">
+        <div class="articles-list">
+          <!-- Article Item -->
+          <!-- <a href="article-link.html" target="_blank" class="article-item" data-tags="case-study">
                     <img src="assets/images/Icons/delivery-truck.svg" alt="Delivery Icon" class="article-icon">
                     <span class="article-title">Zomato vs Swiggy</span>
                     <span class="article-tag">Case-Study</span>
                 </a> -->
-                <!-- Repeat for other articles -->
-            </div>
+          <!-- Repeat for other articles -->
         </div>
-
+      </div>
     </section>
 
     <div class="divider"></div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2>Drop me a message</h2>
-        <div class="contact-content">
-            <div class="contact-left">
-                <p>If you're interested in learning more, proposing collaborations, or have any other inquiries, please don't hesitate to <strong>contact me</strong>.</p>
-            </div>
-            <div class="contact-right">
-                <form action="https://formspree.io/f/mqkraovq" method="POST">
-                    <input type="text" name="name" class="form-control" placeholder="Name" required>
-                    <input type="email" name="_replyto" class="form-control" placeholder="Email" required>
-                    <textarea name="message" class="form-control-textarea" placeholder="Message" maxlength="300" required rows="3"></textarea>
-                    <button type="submit" class="submit-button">Send 
-                        <img src="assets/images/Icons/arrow-right-white.svg" alt=">" class="arrow-icon">
-                    </button>
-                </form>
-            </div>
+      <h2>Drop me a message</h2>
+      <div class="contact-content">
+        <div class="contact-left">
+          <p>
+            If you're interested in learning more, proposing collaborations, or
+            have any other inquiries, please don't hesitate to
+            <strong>contact me</strong>.
+          </p>
         </div>
+        <div class="contact-right">
+          <form action="https://formspree.io/f/mqkraovq" method="POST">
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              name="_replyto"
+              class="form-control"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              name="message"
+              class="form-control-textarea"
+              placeholder="Message"
+              maxlength="300"
+              required
+              rows="3"
+            ></textarea>
+            <button type="submit" class="submit-button">
+              Send
+              <img
+                src="assets/images/Icons/arrow-right-white.svg"
+                alt=">"
+                class="arrow-icon"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
-    
-
-    
 
     <div class="divider"></div>
-    <footer class="site-footer">
-        Built with ❤️ by Joshua
-    </footer>
-    
+    <footer class="site-footer">Built with ❤️ by Joshua</footer>
+
     <div class="scroll-test-footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
-
-    
-</body>
+  </body>
 </html>
